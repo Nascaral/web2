@@ -1,10 +1,3 @@
-/* ============================================================
-   Bridge - Get Started Page Styles
-   ============================================================ */
-
-/* ------------------------------------------------------------
-   HERO DOWNLOAD SECTION
-   ------------------------------------------------------------ */
 
    .hero-download {
     background: var(--color-background);
@@ -71,10 +64,7 @@
     font-weight: 600;
   }
   
-  /* ------------------------------------------------------------
-     QR / SCAN SECTION
-     ------------------------------------------------------------ */
-  
+ 
   .qr-section .qr-container {
     display: flex;
     flex-direction: column;
@@ -106,10 +96,7 @@
     color: var(--color-text-muted);
   }
   
-  /* ------------------------------------------------------------
-     VIDEO SECTION
-     ------------------------------------------------------------ */
-  
+ 
   .video-content-wrapper {
     display: grid;
     gap: var(--space-xl);
@@ -141,11 +128,7 @@
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
   }
-  
-  /* ------------------------------------------------------------
-     GETTING STARTED STEPS
-     ------------------------------------------------------------ */
-  
+ 
   .getting-started-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -192,9 +175,6 @@
     font-size: var(--font-size-sm);
   }
   
-  /* ------------------------------------------------------------
-     FAQ SECTION
-     ------------------------------------------------------------ */
   
   .faq-section .section-title {
     margin-bottom: var(--space-xl);
@@ -235,9 +215,6 @@
     color: var(--color-primary);
   }
   
-  /* ------------------------------------------------------------
-     SECURITY DETAIL SECTION
-     ------------------------------------------------------------ */
   
   .security-detail-grid {
     display: grid;
@@ -267,9 +244,6 @@
     color: var(--color-primary);
   }
   
-  /* ------------------------------------------------------------
-     FINAL DOWNLOAD CTA
-     ------------------------------------------------------------ */
   
   .final-cta-alt {
     text-align: center;
@@ -281,9 +255,7 @@
     font-size: var(--font-size-2xl);
   }
   
-  /* ------------------------------------------------------------
-     RESPONSIVE ADJUSTMENTS
-     ------------------------------------------------------------ */
+
   
   @media (max-width: 900px) {
     .video-content-wrapper,
