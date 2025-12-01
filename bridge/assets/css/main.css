@@ -342,12 +342,8 @@ a:focus-visible, button:focus-visible {
     color: var(--color-text-muted);
   }
   
-  /* ==========================================
-     Benefits Section
-     (HTML has a typo: "benefits-sectiom"; style both)
-     ========================================== */
+  /* Benefits */
   
-  .benefits-sectiom,
   .benefits-section {
     background-color: var(--color-white);
   }
@@ -372,9 +368,7 @@ a:focus-visible, button:focus-visible {
     font-size: var(--font-size-lg);
   }
   
-  /* ==========================================
-     Trust / Stats Section
-     ========================================== */
+  /* Stats */
   
   .trust-section {
     background-color: var(--color-background);
@@ -410,9 +404,7 @@ a:focus-visible, button:focus-visible {
     color: var(--color-text-muted);
   }
   
-  /* ==========================================
-     Security Section
-     ========================================== */
+  /* Security */
   
   .security-section {
     background-color: var(--color-white);
@@ -435,9 +427,7 @@ a:focus-visible, button:focus-visible {
     font-size: var(--font-size-lg);
   }
   
-  /* ==========================================
-     Mission Section
-     ========================================== */
+  /* Mission */
   
   .mission-section {
     background-color: var(--color-primary);
@@ -462,9 +452,7 @@ a:focus-visible, button:focus-visible {
     flex-wrap: wrap;
   }
   
-  /* ==========================================
-     Values Section
-     ========================================== */
+  /* Values */
   
   .values-section {
     background-color: var(--color-white);
@@ -512,9 +500,7 @@ a:focus-visible, button:focus-visible {
     color: var(--color-text-muted);
   }
   
-  /* ==========================================
-     Final CTA Section
-     ========================================== */
+  /* More CTA */
   
   .final-cta-section {
     background-color: var(--color-primary-soft);
@@ -530,9 +516,7 @@ a:focus-visible, button:focus-visible {
     margin-bottom: var(--space-lg);
   }
   
-  /* ==========================================
-     Footer
-     ========================================== */
+  /* Footer */
   
   .footer {
     background-color: var(--color-primary);
@@ -558,9 +542,7 @@ a:focus-visible, button:focus-visible {
     opacity: 1;
   }
   
-  /* ==========================================
-     Responsive Adjustments
-     ========================================== */
+  /* Media */
   
   @media (max-width: 768px) {
     .header-container {

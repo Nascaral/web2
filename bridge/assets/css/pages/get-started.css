@@ -1,0 +1,324 @@
+/* ============================================================
+   Bridge - Get Started Page Styles
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   HERO DOWNLOAD SECTION
+   ------------------------------------------------------------ */
+
+   .hero-download {
+    background: var(--color-background);
+    padding-block: var(--space-3xl);
+    text-align: center;
+  }
+  
+  .hero-download .hero-title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .hero-download .hero-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+  
+  /* Store buttons layout */
+  
+  .download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+  
+  /* Store Button */
+  
+  .btn-store {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    min-width: 200px;
+  }
+  
+  .btn-store:hover {
+    background-color: var(--color-primary-soft);
+    border-color: var(--color-primary);
+  }
+  
+  .store-icon {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+  }
+  
+  .store-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  
+  .store-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  
+  .store-name {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+  }
+  
+  /* ------------------------------------------------------------
+     QR / SCAN SECTION
+     ------------------------------------------------------------ */
+  
+  .qr-section .qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+  
+  .qr-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .qr-code-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  
+  .qr-code-placeholder {
+    padding: var(--space-sm);
+    background-color: var(--color-background);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .qr-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  
+  /* ------------------------------------------------------------
+     VIDEO SECTION
+     ------------------------------------------------------------ */
+  
+  .video-content-wrapper {
+    display: grid;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  
+  .section-title-left {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-tight);
+  }
+  
+  .video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .video-thumbnail {
+    max-width: 560px;
+    width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+  }
+  
+  .video-label {
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  
+  /* ------------------------------------------------------------
+     GETTING STARTED STEPS
+     ------------------------------------------------------------ */
+  
+  .getting-started-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+  
+  .getting-started-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+  
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .step-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-white);
+  }
+  
+  .step-icon-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-background);
+    border-radius: var(--radius-md);
+  }
+  
+  .step-number {
+    margin-bottom: var(--space-xs);
+    font-size: var(--font-size-lg);
+  }
+  
+  .step-text {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+  
+  /* ------------------------------------------------------------
+     FAQ SECTION
+     ------------------------------------------------------------ */
+  
+  .faq-section .section-title {
+    margin-bottom: var(--space-xl);
+  }
+  
+  .faq-grid {
+    display: grid;
+    gap: var(--space-md);
+  }
+  
+  .faq-item {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+  
+  .faq-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .faq-question {
+    font-size: var(--font-size-lg);
+  }
+  
+  .faq-link {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+  }
+  
+  /* ------------------------------------------------------------
+     SECURITY DETAIL SECTION
+     ------------------------------------------------------------ */
+  
+  .security-detail-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: var(--space-xl);
+    align-items: flex-start;
+  }
+  
+  .security-icon-placeholder {
+    padding: var(--space-sm);
+    background-color: var(--color-background);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .security-features {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+  
+  .security-features li:first-child {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+  }
+  
+  /* ------------------------------------------------------------
+     FINAL DOWNLOAD CTA
+     ------------------------------------------------------------ */
+  
+  .final-cta-alt {
+    text-align: center;
+    background-color: var(--color-background);
+  }
+  
+  .final-cta-alt .cta-title {
+    margin-bottom: var(--space-lg);
+    font-size: var(--font-size-2xl);
+  }
+  
+  /* ------------------------------------------------------------
+     RESPONSIVE ADJUSTMENTS
+     ------------------------------------------------------------ */
+  
+  @media (max-width: 900px) {
+    .video-content-wrapper,
+    .getting-started-grid,
+    .security-detail-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .section-title-left {
+      text-align: center;
+    }
+  
+    .getting-started-content {
+      text-align: center;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .faq-item {
+      grid-template-columns: 40px 1fr;
+    }
+  
+    .faq-link {
+      grid-column: 1 / -1;
+      text-align: right;
+    }
+  
+    .download-buttons {
+      flex-direction: column;
+    }
+  
+    .btn-store {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
