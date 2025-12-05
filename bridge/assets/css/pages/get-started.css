@@ -1,5 +1,4 @@
-
-   .hero-download {
+.hero-download {
     background: var(--color-background);
     padding-block: var(--space-3xl);
     text-align: center;
@@ -8,6 +7,7 @@
   .hero-download .hero-title {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--space-sm);
+    color: var(--color-text-main);
   }
   
   .hero-download .hero-subtitle {
@@ -187,11 +187,13 @@
   
   .faq-item {
     display: grid;
-    grid-template-columns: 40px 1fr auto;
-    align-items: center;
+    grid-template-columns: 40px 1fr;
+    align-items: start;
     gap: var(--space-md);
     padding: var(--space-md);
     border-bottom: 1px solid var(--color-border-subtle);
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
   }
   
   .faq-icon {
@@ -204,10 +206,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
   }
   
   .faq-question {
     font-size: var(--font-size-lg);
+    margin-bottom: var(--space-xs);
+  }
+
+  .faq-content {
+    display: flex;
+    flex-direction: column;
   }
   
   .faq-link {
@@ -236,6 +245,11 @@
     margin-top: var(--space-md);
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
+  }
+  
+  .security-features li {
+    margin-bottom: var(--space-xs);
+    line-height: 1.5;
   }
   
   .security-features li:first-child {
@@ -293,4 +307,3 @@
       justify-content: center;
     }
   }
-  
