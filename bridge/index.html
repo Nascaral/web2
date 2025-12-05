@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,13 +14,17 @@
 
     <header class="header" role="banner">
         <div class="header-container">
-            <a href="index.html" class="logo" aria-label="Bridge Home">(Logo) Bridge</a>
+            <a href="index.html" class="logo" aria-label="Bridge Home">
+                Bridge
+            </a>
+            
             <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-link" aria-current="page">Home</a>
-    <a href="pages/get-started.html" class="nav-link">Get Started</a>
-    <a href="pages/support.html" class="nav-link">Support</a>
-    <a href="pages/join-the-team.html" class="nav-link">Join the Team</a>
-</nav>
+                <a href="index.html" class="nav-link" aria-current="page">Home</a>
+                <a href="pages/get-started.html" class="nav-link has-dropdown">Get Started</a>
+                <a href="pages/support.html" class="nav-link has-dropdown">Support</a>
+                <a href="pages/join-the-team.html" class="nav-link has-dropdown">Join the Team</a>
+            </nav>
+            
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
@@ -27,13 +32,207 @@
     </header>
 
     <main id="main-content" role="main">
+     
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title">All your accounts. One clean view.</h1>
-                <p class="hero-subtitle">Link all your accounts from different institutions. View financial insights. Move money instantly.</p>
-                <div class="cta-group">
-                    <a href="pages/get-started.html" class="btn btn-secondary">Get Started</a>
-                   <a href="pages/get-started.html" class="btn btn-primary">Download Bridge</a>
+                <h1 class="hero-title">All your finances in one app</h1>
+                
+          
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Bridge aggregates your accounts</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Bridge gives you financial clarity</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Bridge protects your data</span>
+                    </div>
+                </div>
+                
+               
+                <p class="hero-download-cta">Download Bridge today.</p>
+                
+                <!-- App Store Button -->
+                <a href="#" class="app-store-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    <span class="app-store-text">
+                        <span class="app-store-label">Download on the</span>
+                        <span class="app-store-name">App Store</span>
+                    </span>
+                </a>
+                
+                <!-- Disclaimer -->
+                <p class="hero-disclaimer">Bridge is authorized and regulated by the Financial Conduct Authority. Accounts are FDIC insured up to $250K.</p>
+                
+                <!-- Trust Badge -->
+                <div class="hero-trust">
+                    <div class="trust-badge">
+                        <span class="trust-rating">Excellent</span>
+                        <div class="trust-stars">
+                            <span class="star"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Phone mockup placeholder -  add phone image here -->
+                <div class="hero-phone-wrapper">
+                    <div class="hero-phone-placeholder">
+                        <span>Your phone screenshot here</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrations / Banks We Support Section -->
+        <section class="integrations-section">
+            <div class="container">
+                <p class="integrations-label">Integrations</p>
+                <h2 class="integrations-title">Bridge works with the banks you use.</h2>
+                <p class="integrations-description">Connect your accounts with integrations that actually work. Use our off-the-shelf integrations, or build a custom integration with our REST API.</p>
+                <button class="btn-integrations">Explore all integrations</button>
+            </div>
+            
+            <!-- Animated Marquee -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- First set of logos -->
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Chase</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Bank of America</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Wells Fargo</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Citi</text></svg>
+                        </div>
+                        <span class="bank-category">Credit Cards</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Capital One</text></svg>
+                        </div>
+                        <span class="bank-category">Credit Cards</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Fidelity</text></svg>
+                        </div>
+                        <span class="bank-category">Investments</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Schwab</text></svg>
+                        </div>
+                        <span class="bank-category">Investments</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Vanguard</text></svg>
+                        </div>
+                        <span class="bank-category">Investments</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">TD Bank</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">PNC</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Chase</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Bank of America</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Wells Fargo</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Citi</text></svg>
+                        </div>
+                        <span class="bank-category">Credit Cards</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Capital One</text></svg>
+                        </div>
+                        <span class="bank-category">Credit Cards</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Fidelity</text></svg>
+                        </div>
+                        <span class="bank-category">Investments</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Schwab</text></svg>
+                        </div>
+                        <span class="bank-category">Investments</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">Vanguard</text></svg>
+                        </div>
+                        <span class="bank-category">Investments</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">TD Bank</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
+                    <div class="bank-logo-item">
+                        <div class="bank-logo">
+                            <svg viewBox="0 0 120 40" fill="currentColor"><text x="10" y="28" font-size="16" font-weight="600">PNC</text></svg>
+                        </div>
+                        <span class="bank-category">Banking</span>
+                    </div>
                 </div>
             </div>
         </section>
