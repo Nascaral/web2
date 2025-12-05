@@ -1,7 +1,6 @@
-
-   .investor-hero {
-    padding: var(--spacing-xl) var(--spacing-md);
-    background-color: var(--primary-white);
+.investor-hero {
+    padding: var(--space-xl) var(--space-md);
+    background-color: var(--color-white);
     text-align: center;
 }
 
@@ -9,8 +8,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-lg);
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
 }
 
 .brand-logo {
@@ -21,7 +20,7 @@
 .brand-name {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #4A9B8E;
+    color: var(--color-primary);
     letter-spacing: 0.05em;
     margin: 0;
 }
@@ -29,26 +28,26 @@
 .investor-title {
     font-size: 1.75rem;
     font-weight: 600;
-    color: #4A9B8E;
-    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
 }
 
 .investor-intro {
     font-size: 1rem;
     line-height: 1.7;
-    color: var(--gray-800);
-    margin-bottom: var(--spacing-md);
+    color: var(--color-text-main);
+    margin-bottom: var(--space-md);
 }
 
 .investor-description {
     font-size: 0.9375rem;
     line-height: 1.7;
-    color: var(--gray-600);
+    color: var(--color-text-muted);
     margin: 0;
 }
 
 .investor-description .email-link {
-    color: #4A9B8E;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
 }
@@ -59,46 +58,46 @@
 
 
 .subscription-section {
-    padding: var(--spacing-xl) var(--spacing-md) var(--spacing-2xl);
-    background-color: var(--gray-100);
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+    background-color: var(--color-background);
 }
 
 .subscription-card {
-    background-color: var(--primary-white);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
-    box-shadow: var(--shadow-sm);
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow-soft);
 }
 
 .subscription-title {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--space-sm);
 }
 
 .subscription-subtitle {
     font-size: 0.9375rem;
-    color: var(--gray-600);
+    color: var(--color-text-muted);
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--space-lg);
 }
 
 .subscription-form {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--space-lg);
 }
 
 .subscription-form .form-group {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--space-md);
 }
 
 .subscription-form .form-label {
     display: block;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--space-xs);
     font-weight: 500;
     font-size: 0.9375rem;
-    color: var(--primary-black);
+    color: var(--color-text-main);
 }
 
 .subscription-form .required {
@@ -109,48 +108,48 @@
 .subscription-form .form-input {
     width: 100%;
     padding: 0.875rem;
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
     font-size: 1rem;
     font-family: inherit;
-    background-color: var(--gray-100);
+    background-color: var(--color-background);
 }
 
 .subscription-form .form-input:focus {
     outline: none;
-    border-color: #4A9B8E;
-    background-color: var(--primary-white);
-    box-shadow: 0 0 0 3px rgba(74, 155, 142, 0.1);
+    border-color: var(--color-primary);
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(43, 103, 119, 0.1);
 }
 
 .subscription-form .form-input::placeholder {
-    color: var(--gray-400);
+    color: var(--color-text-muted);
 }
 
 .subscription-form .form-error {
     display: none;
     color: #ef4444;
     font-size: 0.875rem;
-    margin-top: var(--spacing-xs);
+    margin-top: var(--space-xs);
 }
 
 .social-share {
-    padding: var(--spacing-md) 0;
-    border-top: 1px solid var(--gray-200);
-    border-bottom: 1px solid var(--gray-200);
-    margin-bottom: var(--spacing-md);
+    padding: var(--space-md) 0;
+    border-top: 1px solid var(--color-border-subtle);
+    border-bottom: 1px solid var(--color-border-subtle);
+    margin-bottom: var(--space-md);
 }
 
 .share-label {
     font-size: 0.9375rem;
     font-weight: 600;
     text-align: center;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--space-sm);
 }
 
 .social-buttons {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: var(--space-sm);
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -158,11 +157,11 @@
 .social-btn {
     width: 44px;
     height: 44px;
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-white);
+    color: var(--color-white);
     font-weight: 700;
     font-size: 1.25rem;
     text-decoration: none;
@@ -195,26 +194,26 @@
 
 
 .newsletter-link {
-    margin-top: var(--spacing-md);
+    margin-top: var(--space-md);
 }
 
-.btn-secondary {
+.btn-secondary-outline {
     background-color: transparent;
-    color: #4A9B8E;
-    border: 2px solid #4A9B8E;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
     padding: 0.875rem 2rem;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius-sm);
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
-    background-color: rgba(74, 155, 142, 0.1);
-    outline: 2px solid #4A9B8E;
+.btn-secondary-outline:hover,
+.btn-secondary-outline:focus {
+    background-color: rgba(43, 103, 119, 0.1);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
@@ -223,36 +222,18 @@
     text-align: center;
 }
 
-.btn-primary {
-    background-color: #4A9B8E;
-    color: var(--primary-white);
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: #3d8275;
-    outline: 2px solid #4A9B8E;
-    outline-offset: 2px;
-}
-
 
 .investor-info {
-    background-color: var(--primary-white);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-soft);
 }
 
 .info-title {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--space-md);
 }
 
 .info-list {
@@ -264,9 +245,9 @@
 .info-list li {
     font-size: 0.9375rem;
     line-height: 1.6;
-    color: var(--gray-700);
-    padding: var(--spacing-sm) 0;
-    padding-left: var(--spacing-md);
+    color: var(--color-text-muted);
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-md);
     position: relative;
 }
 
@@ -274,7 +255,7 @@
     content: '✓';
     position: absolute;
     left: 0;
-    color: #4A9B8E;
+    color: var(--color-primary);
     font-weight: 700;
     font-size: 1.125rem;
 }
@@ -294,11 +275,11 @@
     }
 
     .subscription-card {
-        padding: var(--spacing-md);
+        padding: var(--space-md);
     }
 
     .investor-info {
-        padding: var(--spacing-md);
+        padding: var(--space-md);
     }
 
     .social-buttons {
@@ -308,7 +289,7 @@
 
 @media (max-width: 480px) {
     .investor-hero {
-        padding: var(--spacing-lg) var(--spacing-md);
+        padding: var(--space-lg) var(--space-md);
     }
 
     .investor-intro,
