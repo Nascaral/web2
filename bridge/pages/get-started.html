@@ -3,240 +3,502 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get started with Bridge - Download the app and connect your accounts in minutes.">
+    <meta name="description" content="Get started with Bridge - Download the app and take control of your finances in under 2 minutes.">
     <title>Get Started - Bridge</title>
     <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/components.css">
-    <link rel="stylesheet" href="../assets/css/utilities.css">
     <link rel="stylesheet" href="../assets/css/pages/get-started.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="header" role="banner">
-    <div class="header-container">
-        <div class="header-pill">
-            <a href="../index.html" class="logo" aria-label="Bridge Home">
-                <img src="../assets/images/logos/bridgeLogo.png" alt="" class="logo-img">
-                <span class="logo-text">Bridge</span>
-            </a>
+        <div class="header-container">
+            <div class="header-pill">
+                <a href="../index.html" class="logo" aria-label="Bridge Home">
+                    <img src="../assets/images/logos/bridgeLogo.png" alt="" class="logo-img">
+                    <span class="logo-text">Bridge</span>
+                </a>
+                
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="./get-started.html" class="nav-link" aria-current="page">Get Started</a>
+                    <a href="./support.html" class="nav-link">Support</a>
+                    <a href="./join-the-team.html" class="nav-link">Join the Team</a>
+                </nav>
+                
+                <a href="https://apps.apple.com/app/your-app-id" class="header-app-link" aria-label="Download on App Store" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                </a>
+            </div>
             
-            <nav class="nav" role="navigation" aria-label="Main navigation">
-                <a href="../index.html" class="nav-link">Home</a>
-                <a href="./get-started.html" class="nav-link" aria-current="page">Get Started</a>
-                <a href="./support.html" class="nav-link">Support</a>
-                <a href="./join-the-team.html" class="nav-link">Join the Team</a>
-            </nav>
-            
-            <a href="https://apps.apple.com/app/your-app-id" class="header-app-link" aria-label="Download on App Store" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                </svg>
-            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
         </div>
-        
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-            <span class="hamburger"></span>
-        </button>
-    </div>
-</header>
+    </header>
 
     <main id="main-content" role="main">
-        <section class="hero-download">
+        <section class="get-started-hero">
             <div class="container">
-                <h1 class="hero-title">Get the Bridge app</h1>
-                <p class="hero-subtitle">It takes about 2 minutes to get set up.</p>
-                <div class="download-buttons">
-                    <a href="#" class="btn btn-store btn-google-play">
-                        <span class="store-icon">▶</span>
-                        <span class="store-text">
-                            <span class="store-label">Get it on</span>
-                            <span class="store-name">Google Play</span>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Ready in under 2 minutes</span>
+                </div>
+                
+                <h1 class="hero-title">Your entire financial life.<br><em>One app.</em></h1>
+                
+                <p class="hero-subtitle">Stop juggling apps. Stop guessing where your money went. Bridge connects all your accounts and gives you the clarity you've been missing.</p>
+                
+                <div class="hero-download-group">
+                    <a href="#" class="app-store-btn-large">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <span class="app-store-text">
+                            <span class="app-store-label">Download on the</span>
+                            <span class="app-store-name">App Store</span>
                         </span>
                     </a>
-                    <a href="#" class="btn btn-store btn-app-store">
-                        <span class="store-icon"></span>
-                        <span class="store-text">
-                            <span class="store-label">Download on the</span>
-                            <span class="store-name">App Store</span>
+                    
+                    <a href="#" class="google-play-btn-large">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                        </svg>
+                        <span class="app-store-text">
+                            <span class="app-store-label">Get it on</span>
+                            <span class="app-store-name">Google Play</span>
                         </span>
                     </a>
                 </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12,000+</span>
+                        <span class="stat-label">Banks Supported</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">256-bit</span>
+                        <span class="stat-label">Encryption</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free Forever</span>
+                    </div>
+                </div>
             </div>
+            
+            <div class="hero-gradient-orb hero-orb-1"></div>
+            <div class="hero-gradient-orb hero-orb-2"></div>
         </section>
 
-        <section class="section qr-section">
+        <section class="how-it-works-section">
             <div class="container">
-                <div class="qr-container">
-                    <h2 class="qr-title">Scan to download</h2>
-                    <div class="qr-code-wrapper">
-                        <div class="qr-code-placeholder">
-                            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="200" height="200" fill="#f5f5f5"/>
-                                <text x="100" y="100" text-anchor="middle" dominant-baseline="middle" fill="#757575" font-size="14">QR Code</text>
+                <div class="section-header">
+                    <span class="section-label">How It Works</span>
+                    <h2 class="section-title">From download to financial clarity<br>in four simple steps.</h2>
+                </div>
+
+                <div class="steps-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <article class="step-card">
+                        <div class="step-number-wrapper">
+                            <span class="step-number">01</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Download Bridge</h3>
+                            <p class="step-description">Get the app from the App Store or Google Play. Create your secure account with just an email.</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
                             </svg>
                         </div>
-                        <p class="qr-description">QR Code Placeholder</p>
-                    </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number-wrapper">
+                            <span class="step-number">02</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Connect Your Accounts</h3>
+                            <p class="step-description">Link all your bank accounts, credit cards, loans, and investments securely through Plaid. We never see your passwords.</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number-wrapper">
+                            <span class="step-number">03</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">See Your Full Picture</h3>
+                            <p class="step-description">View your net worth, total assets, debts, and recent transactions across all accounts in one clean dashboard.</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-number-wrapper">
+                            <span class="step-number">04</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Unlock Bridgette AI</h3>
+                            <p class="step-description">Get personalized financial advice, optimize your accounts, and discover better products tailored to your spending habits.</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="section video-section">
+        <section class="features-grid-section">
             <div class="container">
-                <div class="video-content-wrapper">
-                    <div class="video-text">
-                        <h2 class="section-title-left">Watch the 60-second overview</h2>
-                    </div>
-                    <div class="video-placeholder">
-                        <div class="video-thumbnail">
-                            <svg width="100%" height="100%" viewBox="0 0 560 315" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="560" height="315" fill="#e5e5e5"/>
-                                <circle cx="280" cy="157.5" r="40" fill="#1a1a1a" opacity="0.8"/>
-                                <path d="M270 147.5L290 157.5L270 167.5V147.5Z" fill="white"/>
+                <div class="section-header">
+                    <span class="section-label">What You Get</span>
+                    <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+                </div>
+
+                <div class="features-bento">
+                    <article class="bento-card bento-large">
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
                             </svg>
-                            <p class="video-label">Video Thumbnail Placeholder</p>
+                        </div>
+                        <h3 class="bento-title">All Accounts, One View</h3>
+                        <p class="bento-description">Banks, credit cards, loans, investments—everything synced and organized automatically. No more app-hopping.</p>
+                    </article>
+
+                    <article class="bento-card">
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="bento-title">Real-Time Net Worth</h3>
+                        <p class="bento-description">Watch your wealth grow with live updates across all accounts.</p>
+                    </article>
+
+                    <article class="bento-card">
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="bento-title">One-Click Statements</h3>
+                        <p class="bento-description">Download comprehensive financial statements as PDF instantly.</p>
+                    </article>
+
+                    <article class="bento-card">
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="bento-title">Instant Transfers</h3>
+                        <p class="bento-description">Move money between accounts 24/7, any day of the year.</p>
+                    </article>
+
+                    <article class="bento-card bento-large">
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="bento-title">Bridgette AI Assistant</h3>
+                        <p class="bento-description">Your personal financial advisor that knows your accounts, understands your goals, and gives actionable advice—not generic tips.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="security-section">
+            <div class="container">
+                <div class="security-wrapper">
+                    <div class="security-content">
+                        <span class="section-label">Bank-Grade Security</span>
+                        <h2 class="section-title-left">Your security isn't a feature.<br>It's our foundation.</h2>
+                        <p class="security-description">We built Bridge with the same security standards used by major financial institutions. Your data is encrypted, your credentials are never stored, and your privacy is absolute.</p>
+                        
+                        <div class="security-features">
+                            <div class="security-feature">
+                                <div class="security-feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="security-feature-text">
+                                    <strong>256-bit AES Encryption</strong>
+                                    <span>Data protected in transit and at rest</span>
+                                </div>
+                            </div>
+
+                            <div class="security-feature">
+                                <div class="security-feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="security-feature-text">
+                                    <strong>Zero Password Storage</strong>
+                                    <span>We never see or store your bank credentials</span>
+                                </div>
+                            </div>
+
+                            <div class="security-feature">
+                                <div class="security-feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="security-feature-text">
+                                    <strong>Multi-Factor Authentication</strong>
+                                    <span>Every login protected with MFA</span>
+                                </div>
+                            </div>
+
+                            <div class="security-feature">
+                                <div class="security-feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="security-feature-text">
+                                    <strong>Plaid-Powered Connections</strong>
+                                    <span>Trusted by millions of users worldwide</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="security-visual">
+                        <div class="shield-graphic">
+                            <div class="shield-outer">
+                                <div class="shield-inner">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="shield-ring shield-ring-1"></div>
+                            <div class="shield-ring shield-ring-2"></div>
+                            <div class="shield-ring shield-ring-3"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section getting-started-section">
+        <section class="faq-section">
             <div class="container">
-                <div class="getting-started-grid">
-                    <div class="getting-started-content">
-                        <h2 class="section-title-left">Getting started is simple</h2>
-                        <a href="#" class="btn btn-primary btn-large">Download Bridge</a>
-                    </div>
-                    <div class="steps-list">
-                        <article class="step-item">
-                            <div class="step-icon-wrapper">
-                                <div class="step-icon-placeholder"></div>
-                            </div>
-                            <div class="step-content">
-                                <h3 class="step-number">1) Download Bridge</h3>
-                                <p class="step-text">Get the app from the App Store or Google Play.</p>
-                            </div>
-                        </article>
-
-                        <article class="step-item">
-                            <div class="step-icon-wrapper">
-                                <div class="step-icon-placeholder"></div>
-                            </div>
-                            <div class="step-content">
-                                <h3 class="step-number">2) Securely connect your accounts</h3>
-                                <p class="step-text">Link all your accounts from different institutions via our trusted partner Plaid.</p>
-                            </div>
-                        </article>
-
-                        <article class="step-item">
-                            <div class="step-icon-wrapper">
-                                <div class="step-icon-placeholder"></div>
-                            </div>
-                            <div class="step-content">
-                                <h3 class="step-number">3) See your full money picture</h3>
-                                <p class="step-text">View Net Worth, Total Assets, Total Debt. View Balances, Transaction History, & Download Financial Statements PDF.</p>
-                            </div>
-                        </article>
-
-                        <article class="step-item">
-                            <div class="step-icon-wrapper">
-                                <div class="step-icon-placeholder"></div>
-                            </div>
-                            <div class="step-content">
-                                <h3 class="step-number">4) Turn on Bridgette AI</h3>
-                                <p class="step-text">Get personalized financial advice based on your current standing. Search Bridge's Financial Marketplace to optimize your finances.</p>
-                            </div>
-                        </article>
-                    </div>
+                <div class="section-header">
+                    <span class="section-label">Questions</span>
+                    <h2 class="section-title">Everything you need to know.</h2>
                 </div>
-            </div>
-        </section>
 
-        <section class="section faq-section">
-            <div class="container">
-                <h2 class="section-title">Questions you might have</h2>
                 <div class="faq-grid">
-                    <article class="faq-item">
-                        <div class="faq-icon">?</div>
-                        <div class="faq-content">
-                            <h3 class="faq-question">Is Bridge safe?</h3>
-                            <p class="faq-answer">Yes. Bank Grade Encryption protects your data in transit and at rest. We never store your bank login credentials—authentication is handled securely through Plaid. Every Bridge login is protected with multi-factor authentication, and we practice minimal data retention.</p>
+                    <details class="faq-item">
+                        <summary class="faq-question">Is Bridge really free?</summary>
+                        <div class="faq-answer">
+                            <p>Yes, 100% free. No hidden fees, no premium tiers, no paywalls. We believe everyone deserves access to powerful financial tools, not just the wealthy.</p>
                         </div>
-                    </article>
+                    </details>
 
-                    <article class="faq-item">
-                        <div class="faq-icon">?</div>
-                        <div class="faq-content">
-                            <h3 class="faq-question">Do I need to change banks?</h3>
-                            <p class="faq-answer">No, Bridge does not provide bank accounts. Instead you link all your accounts from different banks and manage them on Bridge.</p>
+                    <details class="faq-item">
+                        <summary class="faq-question">How does Bridge make money?</summary>
+                        <div class="faq-answer">
+                            <p>We earn referral fees when you discover and sign up for financial products through our marketplace—but only if you choose to. Your data is never sold.</p>
                         </div>
-                    </article>
+                    </details>
 
-                    <article class="faq-item">
-                        <div class="faq-icon">?</div>
-                        <div class="faq-content">
-                            <h3 class="faq-question">I already have a bank app — why Bridge?</h3>
-                            <p class="faq-answer">Bridge securely streamlines all of your finances, no need to juggle multiple apps. Experience the synergies of managing all finances from one spot.</p>
+                    <details class="faq-item">
+                        <summary class="faq-question">Is it safe to connect my bank accounts?</summary>
+                        <div class="faq-answer">
+                            <p>Absolutely. We use Plaid, the same service trusted by Venmo, Coinbase, and thousands of financial apps. We never see or store your bank login credentials.</p>
                         </div>
-                    </article>
+                    </details>
 
-                    <article class="faq-item">
-                        <div class="faq-icon">?</div>
-                        <div class="faq-content">
-                            <h3 class="faq-question">I'm bad with money, will this overwhelm me?</h3>
-                            <p class="faq-answer">No, Bridge simplifies your finances and empowers you with AI to help you overcome the obstacles of paying down debt and building wealth.</p>
+                    <details class="faq-item">
+                        <summary class="faq-question">Which banks does Bridge support?</summary>
+                        <div class="faq-answer">
+                            <p>Bridge supports over 12,000 financial institutions in the US, including all major banks, credit unions, investment accounts, and credit cards.</p>
                         </div>
-                    </article>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I delete my data?</summary>
+                        <div class="faq-answer">
+                            <p>Yes, at any time. Go to Settings > Account > Delete Account and all your data will be permanently removed from our servers.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Do I need to switch banks?</summary>
+                        <div class="faq-answer">
+                            <p>No. Bridge works with your existing accounts. We simply connect to them securely so you can see everything in one place.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
 
-        <section class="section security-detail-section">
+        <section class="final-cta-section">
             <div class="container">
-                <div class="security-detail-grid">
-                    <div class="security-icon-wrapper">
-                        <div class="security-icon-placeholder">
-                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="120" height="120" fill="#f5f5f5" rx="8"/>
-                                <path d="M60 30L40 40V60C40 70 50 78 60 80C70 78 80 70 80 60V40L60 30Z" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-                            </svg>
+                <div class="final-cta-wrapper">
+                    <div class="final-cta-content">
+                        <h2 class="final-cta-title">Ready to see the<br>full picture?</h2>
+                        <p class="final-cta-description">Download Bridge now and connect your first account in under 2 minutes. It's free, secure, and will change how you think about your money.</p>
+                        
+                        <div class="final-cta-buttons">
+                            <a href="#" class="app-store-btn-large">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                </svg>
+                                <span class="app-store-text">
+                                    <span class="app-store-label">Download on the</span>
+                                    <span class="app-store-name">App Store</span>
+                                </span>
+                            </a>
+                            
+                            <a href="#" class="google-play-btn-large">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                                </svg>
+                                <span class="app-store-text">
+                                    <span class="app-store-label">Get it on</span>
+                                    <span class="app-store-name">Google Play</span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="final-cta-trust">
+                            <div class="trust-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Free forever</span>
+                            </div>
+                            <div class="trust-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>No credit card</span>
+                            </div>
+                            <div class="trust-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Cancel anytime</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="security-detail-content">
-                        <h2 class="section-title-left">Security & Privacy</h2>
-                        <ul class="security-features">
-                            <li>🔒 Security Measures</li>
-                            <li>• Bank Grade Encryption when data is in transit and at rest</li>
-                            <li>• No Password Storage: We never store the login credentials to your bank</li>
-                            <li>• Authentication handled securely through Plaid</li>
-                            <li>• Every login protected with multi-factor authentication</li>
-                            <li>• Minimal Data Retention: We only store what we must and delete what isn't needed</li>
-                        </ul>
+
+                    <div class="final-cta-visual">
+                        <div class="phone-mockup-large">
+                            <div class="phone-frame-large">
+                                <div class="phone-notch-large"></div>
+                                <div class="phone-screen-large"></div>
+                                <div class="phone-home-indicator"></div>
+                            </div>
+                        </div>
+                        <div class="floating-card floating-card-1">
+                            <span class="floating-card-label">Net Worth</span>
+                            <span class="floating-card-value">$47,832</span>
+                            <span class="floating-card-change positive">+12.4%</span>
+                        </div>
+                        <div class="floating-card floating-card-2">
+                            <span class="floating-card-label">Accounts</span>
+                            <span class="floating-card-value">7 Connected</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="section final-cta-alt">
-            <div class="container">
-                <h2 class="cta-title">Ready when you are.</h2>
-                <a href="#" class="btn btn-primary btn-large">Download Bridge</a>
             </div>
         </section>
     </main>
 
     <footer class="footer" role="contentinfo">
         <div class="footer-container">
-            <a href="privacy.html" class="footer-link">Privacy</a>
-            <a href="terms.html" class="footer-link">Terms of Use</a>
-            <a href="ccpa.html" class="footer-link">CCPA</a>
-            <a href="security.html" class="footer-link">Your Security</a>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/images/logos/bridgeLogo.png" alt="Bridge" class="footer-logo-img">
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Features</h4>
+                        <nav class="footer-column-links">
+                            <a href="../index.html">Account Aggregation</a>
+                            <a href="../index.html">Financial Insights</a>
+                            <a href="../index.html">Manage Debt</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Resources</h4>
+                        <nav class="footer-column-links">
+                            <a href="support.html">Support</a>
+                            <a href="get-started.html">Get Started</a>
+                            <a href="#">Help Center</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Company</h4>
+                        <nav class="footer-column-links">
+                            <a href="#">About</a>
+                            <a href="join-the-team.html">Careers</a>
+                            <a href="#">Investors</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <span>© 2025 Bridge Financial Inc.</span>
+                </div>
+                
+                <div class="footer-legal">
+                    <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+                    <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/form-validation.js"></script>
 </body>
 </html>
