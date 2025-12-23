@@ -1,309 +1,582 @@
-.investor-hero {
-    padding: var(--space-xl) var(--space-md);
-    background-color: var(--color-white);
-    text-align: center;
+.team-hero {
+    background: linear-gradient(
+        180deg,
+        var(--color-white) 0%,
+        var(--color-primary-soft) 40%,
+        #e8d5e0 70%,
+        #f5e6e8 100%
+    );
+    padding: var(--space-4xl) var(--space-md) var(--space-4xl);
 }
 
-.brand-logo-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-lg);
+.team-hero .container {
+    max-width: 800px;
 }
 
-.brand-logo {
-    width: 120px;
-    height: 80px;
-}
-
-.brand-name {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    letter-spacing: 0.05em;
-    margin: 0;
-}
-
-.investor-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: var(--space-md);
-}
-
-.investor-intro {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--color-text-main);
-    margin-bottom: var(--space-md);
-}
-
-.investor-description {
-    font-size: 0.9375rem;
-    line-height: 1.7;
-    color: var(--color-text-muted);
-    margin: 0;
-}
-
-.investor-description .email-link {
-    color: var(--color-primary);
-    text-decoration: none;
+.team-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
     font-weight: 500;
-}
-
-.investor-description .email-link:hover {
-    text-decoration: underline;
-}
-
-
-.subscription-section {
-    padding: var(--space-xl) var(--space-md) var(--space-2xl);
-    background-color: var(--color-background);
-}
-
-.subscription-card {
-    background-color: var(--color-white);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
+    color: var(--color-text-main);
     margin-bottom: var(--space-xl);
-    box-shadow: var(--shadow-soft);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
-.subscription-title {
-    font-size: 1.5rem;
+.team-hero-content {
+    margin-bottom: var(--space-2xl);
+}
+
+.team-hero-content p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-main);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.team-hero-content p:last-child {
+    margin-bottom: 0;
+}
+
+.team-hero-content strong {
     font-weight: 600;
-    text-align: center;
+}
+
+.team-hero-section {
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.team-section-label {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text-main);
     margin-bottom: var(--space-sm);
 }
 
-.subscription-subtitle {
-    font-size: 0.9375rem;
-    color: var(--color-text-muted);
-    text-align: center;
-    margin-bottom: var(--space-lg);
-}
-
-.subscription-form {
-    margin-bottom: var(--space-lg);
-}
-
-.subscription-form .form-group {
+.team-hero-section p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-main);
+    line-height: 1.7;
     margin-bottom: var(--space-md);
 }
 
-.subscription-form .form-label {
-    display: block;
-    margin-bottom: var(--space-xs);
+.team-hero-section p:last-child {
+    margin-bottom: 0;
+}
+
+.team-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-muted);
+    text-underline-offset: 3px;
+}
+
+.section-title-left {
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
     font-weight: 500;
-    font-size: 0.9375rem;
     color: var(--color-text-main);
+    margin-bottom: var(--space-md);
 }
 
-.subscription-form .required {
-    color: #ef4444;
-    margin-left: 2px;
+.section-title-center {
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    color: var(--color-text-main);
+    margin-bottom: var(--space-sm);
+    text-align: center;
 }
 
-.subscription-form .form-input {
-    width: 100%;
-    padding: 0.875rem;
-    border: 1px solid var(--color-border-subtle);
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
-    font-family: inherit;
-    background-color: var(--color-background);
-}
-
-.subscription-form .form-input:focus {
-    outline: none;
-    border-color: var(--color-primary);
+.investors-section {
+    padding: var(--space-4xl) var(--space-md);
     background-color: var(--color-white);
-    box-shadow: 0 0 0 3px rgba(43, 103, 119, 0.1);
 }
 
-.subscription-form .form-input::placeholder {
+.investors-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-3xl);
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.investors-description {
+    font-size: var(--font-size-base);
     color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-xl);
 }
 
-.subscription-form .form-error {
-    display: none;
-    color: #ef4444;
-    font-size: 0.875rem;
-    margin-top: var(--space-xs);
-}
-
-.social-share {
-    padding: var(--space-md) 0;
+.investors-highlights {
+    display: flex;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg) 0;
     border-top: 1px solid var(--color-border-subtle);
     border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.highlight-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+}
+
+.highlight-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+}
+
+.highlight-value {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.investors-contact {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
     margin-bottom: var(--space-md);
 }
 
-.share-label {
-    font-size: 0.9375rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: var(--space-sm);
-}
-
-.social-buttons {
-    display: flex;
-    gap: var(--space-sm);
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.social-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-white);
-    font-weight: 700;
-    font-size: 1.25rem;
-    text-decoration: none;
-}
-
-.social-facebook {
-    background-color: #1877f2;
-}
-
-.social-twitter {
-    background-color: #000000;
-}
-
-.social-reddit {
-    background-color: #ff4500;
-}
-
-.social-linkedin {
-    background-color: #0a66c2;
-}
-
-.social-whatsapp {
-    background-color: #25d366;
-}
-
-.social-btn:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-}
-
-
-.newsletter-link {
-    margin-top: var(--space-md);
-}
-
-.btn-secondary-outline {
-    background-color: transparent;
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    padding: 0.875rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-secondary-outline:hover,
-.btn-secondary-outline:focus {
-    background-color: rgba(43, 103, 119, 0.1);
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-}
-
-.btn-full {
-    width: 100%;
-    text-align: center;
-}
-
-
-.investor-info {
-    background-color: var(--color-white);
+.investors-card {
+    background-color: var(--color-background);
     border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    box-shadow: var(--shadow-soft);
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border-subtle);
 }
 
-.info-title {
-    font-size: 1.5rem;
+.card-title {
+    font-size: var(--font-size-lg);
     font-weight: 600;
+    color: var(--color-text-main);
     margin-bottom: var(--space-md);
 }
 
-.info-list {
+.investors-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.info-list li {
-    font-size: 0.9375rem;
-    line-height: 1.6;
+.investors-list li {
+    font-size: var(--font-size-sm);
     color: var(--color-text-muted);
+    line-height: 1.6;
     padding: var(--space-sm) 0;
-    padding-left: var(--space-md);
+    padding-left: var(--space-lg);
     position: relative;
+    border-bottom: 1px solid var(--color-border-subtle);
 }
 
-.info-list li::before {
-    content: '✓';
+.investors-list li:last-child {
+    border-bottom: none;
+}
+
+.investors-list li::before {
+    content: '';
     position: absolute;
     left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+}
+
+.careers-section {
+    padding: var(--space-4xl) var(--space-md);
+    background-color: var(--color-background);
+}
+
+.careers-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--space-2xl);
+}
+
+.careers-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.job-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border-subtle);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: var(--space-sm) var(--space-xl);
+    align-items: center;
+    transition: box-shadow 200ms ease;
+}
+
+.job-card:hover {
+    box-shadow: var(--shadow-card);
+}
+
+.job-info {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.job-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: var(--space-xs);
+}
+
+.job-meta {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.job-location,
+.job-type {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.job-description {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.job-apply {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+.job-card-open {
+    background-color: transparent;
+    border-style: dashed;
+}
+
+.job-card-open .job-title {
     color: var(--color-primary);
-    font-weight: 700;
-    font-size: 1.125rem;
+}
+
+.subscribe-section {
+    padding: var(--space-4xl) var(--space-md);
+    background-color: var(--color-white);
+}
+
+.subscribe-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-3xl);
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.subscribe-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.subscribe-form {
+    background-color: var(--color-background);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.form-label {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    font-family: inherit;
+    background-color: var(--color-white);
+    color: var(--color-text-main);
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(43, 103, 119, 0.1);
+}
+
+.form-input::placeholder {
+    color: var(--color-text-muted);
+    opacity: 0.7;
+}
+
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-md) center;
+    padding-right: var(--space-2xl);
+    cursor: pointer;
+}
+
+.form-error {
+    display: none;
+    font-size: var(--font-size-sm);
+    color: #ef4444;
+}
+
+.btn-submit {
+    align-self: flex-start;
+    padding: var(--space-sm) var(--space-xl);
+}
+
+.founders-section {
+    padding: var(--space-4xl) var(--space-md);
+    background-color: var(--color-background);
+}
+
+.founders-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.founders-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+}
+
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.founder-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border-subtle);
+    transition: box-shadow 200ms ease;
+}
+
+.founder-card:hover {
+    box-shadow: var(--shadow-card);
+}
+
+.founder-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--color-primary-soft);
+}
+
+.founder-info {
+    padding: var(--space-lg);
+}
+
+.founder-name {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: var(--space-2xs);
+}
+
+.founder-role {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+}
+
+.founder-bio {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+.founder-links {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.founder-social {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-background);
+    color: var(--color-text-muted);
+    transition: all 150ms ease;
+}
+
+.founder-social:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.founder-social svg {
+    width: 16px;
+    height: 16px;
+}
+
+.team-cta {
+    padding: var(--space-4xl) var(--space-md);
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.team-cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-cta-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-2xl);
+    font-weight: 500;
+    color: var(--color-text-main);
+    margin-bottom: var(--space-md);
+}
+
+.team-cta-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+}
+
+.team-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+@media (max-width: 900px) {
+    .investors-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .subscribe-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .subscribe-content {
+        text-align: center;
+    }
+
+    .founders-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-    .investor-title {
-        font-size: 1.5rem;
+    .team-hero {
+        padding: var(--space-3xl) var(--space-md);
     }
 
-    .brand-logo {
-        width: 100px;
-        height: 66px;
+    .team-hero-title {
+        font-size: 2rem;
     }
 
-    .brand-name {
-        font-size: 1.5rem;
+    .investors-highlights {
+        flex-direction: column;
+        gap: var(--space-md);
     }
 
-    .subscription-card {
-        padding: var(--space-md);
+    .job-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
     }
 
-    .investor-info {
-        padding: var(--space-md);
+    .job-apply {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: start;
+        margin-top: var(--space-sm);
     }
 
-    .social-buttons {
-        justify-content: center;
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-submit {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .founders-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .team-cta-actions {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .team-cta-actions .btn {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .investor-hero {
-        padding: var(--space-lg) var(--space-md);
+    .team-hero-title {
+        font-size: 1.75rem;
     }
 
-    .investor-intro,
-    .investor-description {
-        font-size: 0.9375rem;
+    .section-title-left,
+    .section-title-center {
+        font-size: var(--font-size-lg);
     }
 
-    .subscription-title {
-        font-size: 1.25rem;
-    }
-
-    .social-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.125rem;
+    .team-cta-title {
+        font-size: var(--font-size-xl);
     }
 }
