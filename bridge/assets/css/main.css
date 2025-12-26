@@ -143,6 +143,7 @@ a:focus-visible, button:focus-visible {
     width: 100%;
     max-width: 900px;
     background-color: var(--color-background);
+    opacity: 95%;
     border-radius: 999px;
     padding: var(--space-xs) var(--space-sm) var(--space-xs) var(--space-md);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
