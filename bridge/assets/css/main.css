@@ -573,19 +573,19 @@ a:focus-visible, button:focus-visible {
     justify-content: center;
     height: 40px;
     padding: 0 var(--space-md);
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 600;
-    font-size: var(--font-size-sm);
-    transition: color 200ms ease;
+    transition: opacity 200ms ease;
 }
 
 .bank-logo:hover {
-    color: var(--color-white);
+    opacity: 0.8;
 }
 
-.bank-logo svg {
-    height: 28px;
+.bank-logo img {
+    max-height: 32px;
+    max-width: 100%;
     width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .bank-category {
