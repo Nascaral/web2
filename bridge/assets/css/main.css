@@ -3,8 +3,6 @@
 /* change bridge color based on palletee */
  /* skip to main content remove */
  /* fix qr code expanding the download button*/
- /* Fonts are ugly, figure out way to fix*/
- /* hero titles are different font weights, fix */
  /* images are all pixalated */
  /* compare options screenshot has a bar problem */
 :root {
@@ -295,7 +293,7 @@ a:focus-visible, button:focus-visible {
 .hero-title {
     font-family: var(--font-display);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.15;
     color: var(--color-text-main);
     margin-bottom: var(--space-xl);
