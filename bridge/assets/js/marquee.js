@@ -22,12 +22,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     track.style.animation = `marquee ${duration}s linear infinite`;
     
-    // Pause on hover
-    track.addEventListener('mouseenter', () => {
-        track.style.animationPlayState = 'paused';
-    });
-    
-    track.addEventListener('mouseleave', () => {
-        track.style.animationPlayState = 'running';
-    });
 });
