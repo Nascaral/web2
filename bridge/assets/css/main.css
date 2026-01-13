@@ -1,24 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=PT+Sans:wght@400;700&display=swap');
 
-/* Titles are Raleway, Pt sans for body  */
-/* change bridge color based on palletee */
-/* no newsletter */
-/* add QR code */
-/* skip to main content? whats that? */ 
-/* remove any reference to google play store */
-/* Instant transfers in beta "add beta" */
-/* remove instant transfers and combine it with move your money */
-
+ /* images are all pixalated */
+ /* compare options screenshot has a bar problem */
 :root {
     /* Color Palette */
-    --color-primary: #2b6777;
+    --color-primary: #245968;
     --color-primary-soft: #c8d8e4;
     --color-accent: #52ab98;
 
     --color-white: #ffffff;
     --color-background: #f2f2f2;
     --color-dark: #1a1a1a;
-    --color-text-main: #1f2933;
+    --color-text-main: #2b3c4d;
     --color-text-muted: #6b7280;
     --color-border-subtle: #e5e7eb;
 
@@ -43,8 +36,8 @@
     --space-4xl: 5rem;
 
     /* Typography */
-    --font-base: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-display: 'Playfair Display', Georgia, serif;
+    --font-base: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-display: 'Raleway', system-ui, sans-serif;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
     --font-size-lg: 1.125rem;
@@ -173,9 +166,10 @@ a:focus-visible, button:focus-visible {
 }
 
 .logo-text {
+    font-family: var(--font-display);
     font-weight: 600;
     font-size: 1.1rem;
-    color: var(--color-text-main);
+    color: var(--color-primary);
 }
 
 /* Navigation */
@@ -195,14 +189,10 @@ a:focus-visible, button:focus-visible {
     transition: color 200ms ease;
 }
 
-
-
 .nav-link:hover,
 .nav-link:focus-visible {
     color: var(--color-text-main);
 }
-
-
 
 .nav-link[aria-current="page"] {
     color: var(--color-text-main);
@@ -300,7 +290,7 @@ a:focus-visible, button:focus-visible {
 .hero-title {
     font-family: var(--font-display);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.15;
     color: var(--color-text-main);
     margin-bottom: var(--space-xl);
@@ -309,6 +299,7 @@ a:focus-visible, button:focus-visible {
 
 .hero-title em {
     font-style: italic;
+    font-weight: 500;
 }
 
 .hero-phone-wrapper {
@@ -319,31 +310,28 @@ a:focus-visible, button:focus-visible {
     margin-bottom: -60px;
 }
 
-.hero-phone-placeholder {
-    width: 280px;
-    height: 500px;
-    background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
-    border-radius: 40px;
+.hero-phone-wrapper .iphone-frame {
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-muted);
-    font-size: var(--font-size-sm);
-    position: relative;
-    overflow: hidden;
 }
 
-.hero-phone-placeholder::before {
-    content: "";
+.hero-phone-wrapper .iphone-notch {
     position: absolute;
-    top: 8px;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
     height: 24px;
     background: #1a1a1a;
     border-radius: 12px;
+    z-index: 10;
+}
+
+.hero-phone-wrapper .iphone-screen {
+    width: 100%;
+    height: 100%;
+    background: var(--color-white);
+    border-radius: 36px;
+    overflow: hidden;
 }
 
 .hero-features {
@@ -372,7 +360,7 @@ a:focus-visible, button:focus-visible {
 .hero-download-cta {
     font-family: var(--font-display);
     font-size: var(--font-size-lg);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-text-main);
     margin-bottom: var(--space-lg);
 }
@@ -487,6 +475,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .integrations-title {
+    font-family: var(--font-display);
     font-size: var(--font-size-xl);
     font-weight: 600;
     color: var(--color-white);
@@ -583,19 +572,19 @@ a:focus-visible, button:focus-visible {
     justify-content: center;
     height: 40px;
     padding: 0 var(--space-md);
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 600;
-    font-size: var(--font-size-sm);
-    transition: color 200ms ease;
+    transition: opacity 200ms ease;
 }
 
 .bank-logo:hover {
-    color: var(--color-white);
+    opacity: 0.8;
 }
 
-.bank-logo svg {
-    height: 28px;
+.bank-logo img {
+    max-height: 32px;
+    max-width: 100%;
     width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .bank-category {
@@ -604,12 +593,14 @@ a:focus-visible, button:focus-visible {
     text-transform: capitalize;
 }
 
-/* ================================================
-   FEATURES SHOWCASE SECTION - Phone Mockup Cards
-   ================================================ */
+/* Features Showcase Section */
 .features-showcase-section {
     background-color: var(--color-white);
     padding-block: var(--space-4xl);
+}
+
+.features-showcase-section.alt-bg {
+    background-color: var(--color-background);
 }
 
 .features-header {
@@ -620,7 +611,7 @@ a:focus-visible, button:focus-visible {
 .features-headline {
     font-family: var(--font-display);
     font-size: var(--font-size-2xl);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-text-main);
     margin-bottom: var(--space-sm);
 }
@@ -638,6 +629,10 @@ a:focus-visible, button:focus-visible {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-xl);
     margin-bottom: var(--space-2xl);
+}
+
+.features-card-grid.three-col {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .feature-showcase-card {
@@ -693,18 +688,6 @@ a:focus-visible, button:focus-visible {
     object-position: top;
 }
 
-/* Fallback when no image is loaded */
-.phone-screen:not(:has(img[src])) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.phone-screen img:not([src]), 
-.phone-screen img[src=""] {
-    display: none;
-}
-
 .phone-screen::after {
     content: "";
     position: absolute;
@@ -723,6 +706,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .feature-card-title {
+    font-family: var(--font-display);
     font-size: var(--font-size-base);
     font-weight: 600;
     color: var(--color-text-main);
@@ -740,9 +724,7 @@ a:focus-visible, button:focus-visible {
     justify-content: center;
 }
 
-/* ================================================
-   SPLIT SECTION - Two Column Layout
-   ================================================ */
+/* Split Section */
 .split-section {
     background-color: var(--color-white);
     padding-block: var(--space-3xl);
@@ -773,7 +755,7 @@ a:focus-visible, button:focus-visible {
 .split-heading {
     font-family: var(--font-display);
     font-size: var(--font-size-lg);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-text-main);
     line-height: 1.3;
 }
@@ -781,7 +763,7 @@ a:focus-visible, button:focus-visible {
 .split-heading-large {
     font-family: var(--font-display);
     font-size: var(--font-size-xl);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-text-main);
     line-height: 1.3;
     margin-bottom: var(--space-xs);
@@ -798,90 +780,6 @@ a:focus-visible, button:focus-visible {
     color: var(--color-text-muted);
     line-height: 1.7;
 }
-
-/* ================================================
-   IMAGE CARD GRID - Regular Image Placeholders
-   ================================================ */
-.marketplace-section,
-.movement-section {
-    background-color: var(--color-white);
-    padding-block: var(--space-4xl);
-}
-
-.movement-section {
-    background-color: var(--color-background);
-}
-
-.image-card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
-}
-
-.image-card-grid.four-col {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.image-showcase-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.image-placeholder {
-    aspect-ratio: 4/3;
-    background: linear-gradient(145deg, #f8f8f8, #efefef);
-    border-radius: var(--radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: var(--space-lg);
-    border: 1px solid var(--color-border-subtle);
-    transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-.image-placeholder:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-card);
-}
-
-.placeholder-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
-}
-
-.placeholder-icon {
-    font-size: 2rem;
-    opacity: 0.7;
-}
-
-.placeholder-text {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-    opacity: 0.7;
-}
-
-.image-card-content {
-    text-align: left;
-}
-
-.image-card-title {
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    color: var(--color-text-main);
-    margin-bottom: var(--space-xs);
-}
-
-.image-card-description {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-    line-height: 1.6;
-}
-
-/* ================================================
-   EXISTING SECTIONS (Security, Mission, Values, etc.)
-   ================================================ */
 
 /* Security */
 .security-section {
@@ -909,7 +807,9 @@ a:focus-visible, button:focus-visible {
 }
 
 .security-title {
+    font-family: var(--font-display);
     font-size: var(--font-size-lg);
+    font-weight: 600;
 }
 
 /* Mission */
@@ -975,7 +875,9 @@ a:focus-visible, button:focus-visible {
 }
 
 .value-content h3 {
+    font-family: var(--font-display);
     font-size: var(--font-size-lg);
+    font-weight: 600;
     margin-bottom: var(--space-xs);
 }
 
@@ -1007,7 +909,7 @@ a:focus-visible, button:focus-visible {
 .final-cta-tagline {
     font-family: var(--font-display);
     font-size: clamp(1.5rem, 3.5vw, 2rem);
-    font-weight: 400;
+    font-weight: 600;
     color: var(--color-text-main);
     margin-bottom: var(--space-2xs);
     line-height: 1.3;
@@ -1021,6 +923,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .final-cta-download {
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: var(--font-size-base);
     color: var(--color-text-main);
@@ -1052,7 +955,6 @@ a:focus-visible, button:focus-visible {
     z-index: 2;
 }
 
-/* iPhone Notch (Dynamic Island style) */
 .iphone-notch {
     position: absolute;
     top: 16px;
@@ -1065,7 +967,6 @@ a:focus-visible, button:focus-visible {
     z-index: 10;
 }
 
-/* iPhone Screen */
 .iphone-screen {
     width: 100%;
     height: 100%;
@@ -1082,7 +983,6 @@ a:focus-visible, button:focus-visible {
     object-position: top;
 }
 
-/* Home Indicator */
 .iphone-home-indicator {
     position: absolute;
     bottom: 8px;
@@ -1094,7 +994,6 @@ a:focus-visible, button:focus-visible {
     border-radius: 2px;
 }
 
-/* Hand Image */
 .hand-image {
     position: absolute;
     right: -40px;
@@ -1109,18 +1008,12 @@ a:focus-visible, button:focus-visible {
     height: auto;
 }
 
-/* Placeholder when no hand image */
-.hand-image:has(img:not([src])),
-.hand-image:has(img[src=""]) {
-    display: none;
-}
-
 .btn-large {
     padding: var(--space-md) var(--space-2xl);
     font-size: var(--font-size-base);
 }
 
-/* Footer - Dark Theme */
+/* Footer */
 .footer {
     background-color: var(--color-dark);
     color: rgba(255, 255, 255, 0.7);
@@ -1172,6 +1065,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .footer-column-title {
+    font-family: var(--font-display);
     font-size: var(--font-size-sm);
     font-weight: 600;
     color: rgba(255, 255, 255, 0.5);
@@ -1196,66 +1090,15 @@ a:focus-visible, button:focus-visible {
     color: var(--color-white);
 }
 
-/* Newsletter Section */
-.footer-newsletter {
-    max-width: 240px;
-}
-
-.newsletter-description {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: var(--space-md);
-    line-height: 1.5;
-}
-
-.newsletter-form {
+/* Footer Social Section (replacing newsletter) */
+.footer-social-section {
     display: flex;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-lg);
+    flex-direction: column;
+    gap: var(--space-md);
 }
 
-.newsletter-input {
-    flex: 1;
-    padding: var(--space-sm) var(--space-md);
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-sm);
-    color: var(--color-white);
-    font-size: var(--font-size-sm);
-    outline: none;
-    transition: border-color 200ms ease, background-color 200ms ease;
-}
-
-.newsletter-input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.newsletter-input:focus {
-    border-color: rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.newsletter-btn {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-sm);
-    color: var(--color-white);
-    cursor: pointer;
-    transition: background-color 200ms ease;
-}
-
-.newsletter-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.newsletter-btn svg {
-    width: 18px;
-    height: 18px;
+.footer-social-section .footer-social {
+    flex-direction: row;
 }
 
 /* Footer Social Icons */
@@ -1365,20 +1208,26 @@ a:focus-visible, button:focus-visible {
 
 /* Section Title */
 .section-title {
+    font-family: var(--font-display);
     font-size: var(--font-size-2xl);
+    font-weight: 600;
     text-align: center;
     margin-bottom: var(--space-xl);
 }
 
-/* ================================================
-   RESPONSIVE STYLES
-   ================================================ */
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .features-card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .image-card-grid.four-col {
+    .features-card-grid.three-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .features-card-grid.three-col {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1415,7 +1264,22 @@ a:focus-visible, button:focus-visible {
         display: inline-flex;
     }
     
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+@media (max-width: 600px) {
+    .features-card-grid.three-col {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 480px) {
     .section {
         padding-block: var(--space-2xl);
@@ -1434,10 +1298,6 @@ a:focus-visible, button:focus-visible {
         width: 180px;
         height: 320px;
     }
-    
-    .image-card-grid.four-col {
-        grid-template-columns: 1fr;
-    }
 
     .cta-group {
         flex-direction: column;
@@ -1446,11 +1306,6 @@ a:focus-visible, button:focus-visible {
 
     .btn {
         width: 100%;
-    }
-
-    .hero-phone-placeholder {
-        width: 220px;
-        height: 400px;
     }
     
     /* Final CTA Mobile */
@@ -1467,5 +1322,9 @@ a:focus-visible, button:focus-visible {
     .hand-image {
         right: -30px;
         width: 160px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
     }
 }
