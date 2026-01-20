@@ -154,6 +154,11 @@ npx http-server
 
 # Using PHP
 php -S localhost:8000
+
+# Using VSCode (Easiest)
+git clone the repository
+"cd" into the repository and use "code ." to open the file
+Download and use "Live server" to open and view the website
 ```
 
 4. Navigate to `http://localhost:8000` in your browser
