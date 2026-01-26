@@ -4,8 +4,6 @@
 
 ## Remove Stay Updated
 
-## Implement privacy and terms
-
 ## Fix Screenshot quality
 
 ## Add phone image to get-started 
