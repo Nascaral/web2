@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=PT+Sans:wght@400;700&display=swap');
 
- /* images are all pixalated */
- /* compare options screenshot has a bar problem */
 :root {
     /* Color Palette */
     --color-primary: #245968;
     --color-primary-soft: #c8d8e4;
     --color-accent: #52ab98;
-
     --color-white: #ffffff;
     --color-background: #f2f2f2;
     --color-dark: #1a1a1a;
@@ -43,10 +40,11 @@
     --font-size-lg: 1.125rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 2rem;
-    --font-size-3xl: 2.5rem;
-    --line-height-tight: 1.2;
-    --line-height-normal: 1.5;
 }
+
+/* ===================
+   BASE STYLES
+   =================== */
 
 *,
 *::before,
@@ -62,7 +60,7 @@ body {
     margin: 0;
     font-family: var(--font-base);
     font-size: var(--font-size-base);
-    line-height: var(--line-height-normal);
+    line-height: 1.5;
     color: var(--color-text-main);
     background-color: var(--color-white);
 }
@@ -86,7 +84,10 @@ a:focus-visible, button:focus-visible {
     outline-offset: 3px;
 }
 
-/* Layout */
+/* ===================
+   LAYOUT UTILITIES
+   =================== */
+
 .container {
     max-width: var(--max-width);
     margin-inline: auto;
@@ -121,7 +122,55 @@ a:focus-visible, button:focus-visible {
     top: 0;
 }
 
-/* Coming Soon Badge */
+/* ===================
+   BUTTONS
+   =================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 150ms ease-out, color 150ms ease-out,
+        border-color 150ms ease-out, box-shadow 150ms ease-out;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+    background-color: #439283;
+}
+
+.btn-light {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-color: var(--color-border-subtle);
+}
+
+.btn-light:hover {
+    background-color: var(--color-primary-soft);
+}
+
+.btn-large {
+    padding: var(--space-md) var(--space-2xl);
+    font-size: var(--font-size-base);
+}
+
+/* ===================
+   BADGES
+   =================== */
+
 .coming-soon-badge {
     display: inline-block;
     font-size: 0.65em;
@@ -136,12 +185,15 @@ a:focus-visible, button:focus-visible {
     margin-left: var(--space-sm);
 }
 
-/* Header */
+/* ===================
+   HEADER
+   =================== */
+
 .header {
     position: sticky;
     top: 0;
     z-index: 50;
-    padding: var(--space-md) var(--space-md);
+    padding: var(--space-md);
     background: transparent;
 }
 
@@ -166,7 +218,6 @@ a:focus-visible, button:focus-visible {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -199,16 +250,13 @@ a:focus-visible, button:focus-visible {
     font-size: var(--font-size-sm);
     font-weight: 500;
     color: var(--color-text-muted);
-    padding: var(--space-sm) var(--space-sm);
+    padding: var(--space-sm);
     position: relative;
     transition: color 200ms ease;
 }
 
 .nav-link:hover,
-.nav-link:focus-visible {
-    color: var(--color-text-main);
-}
-
+.nav-link:focus-visible,
 .nav-link[aria-current="page"] {
     color: var(--color-text-main);
 }
@@ -223,7 +271,7 @@ a:focus-visible, button:focus-visible {
     pointer-events: none;
 }
 
-/* App Store Link in Nav */
+/* Header App Link */
 .header-app-link {
     display: flex;
     align-items: center;
@@ -232,7 +280,7 @@ a:focus-visible, button:focus-visible {
     height: 40px;
     color: var(--color-text-main);
     border-radius: 50%;
-    transition: background-color 200ms ease, color 200ms ease;
+    transition: opacity 200ms ease;
     flex-shrink: 0;
 }
 
@@ -245,15 +293,13 @@ a:focus-visible, button:focus-visible {
     height: 22px;
 }
 
-/* Mobile menu button */
+/* Mobile Menu */
 .mobile-menu-toggle {
     display: none;
-    border: 1px solid var(--color-border-subtle);
-    background-color: var(--color-white);
-    border-radius: 8px;
+    border: none;
+    background-color: transparent;
     padding: var(--space-xs);
     cursor: pointer;
-    margin-left: var(--space-md);
 }
 
 .hamburger,
@@ -274,18 +320,15 @@ a:focus-visible, button:focus-visible {
     left: 0;
 }
 
-.hamburger::before {
-    top: -5px;
-}
+.hamburger::before { top: -5px; }
+.hamburger::after { top: 5px; }
 
-.hamburger::after {
-    top: 5px;
-}
+/* ===================
+   HERO SECTION
+   =================== */
 
-/* Hero Section */
 .hero {
-    background: linear-gradient(
-        180deg,
+    background: linear-gradient(180deg,
         var(--color-white) 0%,
         var(--color-primary-soft) 40%,
         #e8d5e0 70%,
@@ -294,7 +337,6 @@ a:focus-visible, button:focus-visible {
     padding-top: var(--space-3xl);
     padding-bottom: 0;
     overflow: hidden;
-    position: relative;
 }
 
 .hero .container {
@@ -315,38 +357,6 @@ a:focus-visible, button:focus-visible {
 .hero-title em {
     font-style: italic;
     font-weight: 500;
-}
-
-.hero-phone-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: var(--space-xl);
-    margin-bottom: -60px;
-}
-
-.hero-phone-wrapper .iphone-frame {
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-}
-
-.hero-phone-wrapper .iphone-notch {
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 24px;
-    background: #1a1a1a;
-    border-radius: 12px;
-    z-index: 10;
-}
-
-.hero-phone-wrapper .iphone-screen {
-    width: 100%;
-    height: 100%;
-    background: var(--color-white);
-    border-radius: 36px;
-    overflow: hidden;
 }
 
 .hero-features {
@@ -380,6 +390,7 @@ a:focus-visible, button:focus-visible {
     margin-bottom: var(--space-lg);
 }
 
+/* App Store Button */
 .app-store-btn {
     display: inline-flex;
     align-items: center;
@@ -418,6 +429,7 @@ a:focus-visible, button:focus-visible {
     font-weight: 600;
 }
 
+/* Hero Trust & Disclaimer */
 .hero-trust {
     display: flex;
     flex-direction: column;
@@ -477,7 +489,43 @@ a:focus-visible, button:focus-visible {
     opacity: 0.8;
 }
 
-/* Integrations Section */
+/* Hero Phone */
+.hero-phone-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-xl);
+    margin-bottom: -60px;
+}
+
+.hero-phone-wrapper .iphone-frame {
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+}
+
+.hero-phone-wrapper .iphone-notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 24px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    z-index: 10;
+}
+
+.hero-phone-wrapper .iphone-screen {
+    width: 100%;
+    height: 100%;
+    background: var(--color-white);
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+/* ===================
+   INTEGRATIONS SECTION
+   =================== */
+
 .integrations-section {
     background-color: var(--color-text-main);
     padding-block: var(--space-2xl);
@@ -513,26 +561,7 @@ a:focus-visible, button:focus-visible {
     margin: 0 auto var(--space-lg);
 }
 
-.btn-integrations {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-sm) var(--space-lg);
-    background-color: transparent;
-    color: var(--color-white);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 999px;
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 200ms ease;
-}
-
-.btn-integrations:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
+/* Marquee */
 .marquee-wrapper {
     position: relative;
     width: 100%;
@@ -573,12 +602,8 @@ a:focus-visible, button:focus-visible {
 }
 
 @keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .bank-logo-item {
@@ -617,7 +642,10 @@ a:focus-visible, button:focus-visible {
     text-transform: capitalize;
 }
 
-/* Features Showcase Section */
+/* ===================
+   FEATURES SHOWCASE
+   =================== */
+
 .features-showcase-section {
     background-color: var(--color-white);
     padding-block: var(--space-4xl);
@@ -665,14 +693,42 @@ a:focus-visible, button:focus-visible {
     align-items: center;
 }
 
-/* Phone Frame Mockup */
 .feature-phone-mockup {
     margin-bottom: var(--space-lg);
 }
 
+.feature-card-content {
+    text-align: center;
+    max-width: 200px;
+}
+
+.feature-card-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: var(--space-xs);
+}
+
+.feature-card-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.features-cta {
+    display: flex;
+    justify-content: center;
+}
+
+/* ===================
+   PHONE FRAMES
+   =================== */
+
+/* Feature Phone Frame */
 .phone-frame {
-    width: 180px;
-    height: 320px;
+    width: 220px;
+    height: 390px;
     background: linear-gradient(145deg, #fafafa, #f0f0f0);
     border-radius: 28px;
     padding: 8px;
@@ -710,6 +766,7 @@ a:focus-visible, button:focus-visible {
     height: 100%;
     object-fit: cover;
     object-position: top;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .phone-screen::after {
@@ -723,32 +780,65 @@ a:focus-visible, button:focus-visible {
     pointer-events: none;
 }
 
-/* Feature Card Content */
-.feature-card-content {
-    text-align: center;
-    max-width: 200px;
+/* iPhone Frame (Hero & CTA) */
+.iphone-frame {
+    position: relative;
+    width: 240px;
+    height: 480px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #d4d4d4 100%);
+    border-radius: 44px;
+    padding: 12px;
+    box-shadow: 
+        0 0 0 1px rgba(0, 0, 0, 0.1),
+        0 20px 50px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+        inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    z-index: 2;
 }
 
-.feature-card-title {
-    font-family: var(--font-display);
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    color: var(--color-text-main);
-    margin-bottom: var(--space-xs);
+.iphone-notch {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 28px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    z-index: 10;
 }
 
-.feature-card-description {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-    line-height: 1.5;
+.iphone-screen {
+    width: 100%;
+    height: 100%;
+    background: var(--color-white);
+    border-radius: 36px;
+    overflow: hidden;
 }
 
-.features-cta {
-    display: flex;
-    justify-content: center;
+.iphone-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    image-rendering: -webkit-optimize-contrast;
 }
 
-/* Split Section */
+.iphone-home-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+/* ===================
+   SPLIT SECTION
+   =================== */
+
 .split-section {
     background-color: var(--color-white);
     padding-block: var(--space-3xl);
@@ -805,7 +895,10 @@ a:focus-visible, button:focus-visible {
     line-height: 1.7;
 }
 
-/* Security */
+/* ===================
+   SECURITY SECTION
+   =================== */
+
 .security-section {
     background-color: var(--color-white);
 }
@@ -836,7 +929,10 @@ a:focus-visible, button:focus-visible {
     font-weight: 600;
 }
 
-/* Mission */
+/* ===================
+   MISSION SECTION
+   =================== */
+
 .mission-section {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -861,7 +957,10 @@ a:focus-visible, button:focus-visible {
     flex-wrap: wrap;
 }
 
-/* Values */
+/* ===================
+   VALUES SECTION
+   =================== */
+
 .values-section {
     background-color: var(--color-white);
 }
@@ -910,7 +1009,10 @@ a:focus-visible, button:focus-visible {
     color: var(--color-text-muted);
 }
 
-/* Final CTA */
+/* ===================
+   FINAL CTA SECTION
+   =================== */
+
 .final-cta-section {
     background-color: var(--color-background);
     padding-top: var(--space-4xl);
@@ -954,68 +1056,12 @@ a:focus-visible, button:focus-visible {
     margin-bottom: var(--space-lg);
 }
 
-/* iPhone with Hand */
 .final-cta-phone {
     position: relative;
     width: 340px;
     height: 500px;
     display: flex;
     justify-content: center;
-}
-
-/* iPhone Frame */
-.iphone-frame {
-    position: relative;
-    width: 240px;
-    height: 480px;
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #d4d4d4 100%);
-    border-radius: 44px;
-    padding: 12px;
-    box-shadow: 
-        0 0 0 1px rgba(0, 0, 0, 0.1),
-        0 20px 50px rgba(0, 0, 0, 0.15),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.5),
-        inset 0 2px 4px rgba(255, 255, 255, 0.8);
-    z-index: 2;
-}
-
-.iphone-notch {
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90px;
-    height: 28px;
-    background: #1a1a1a;
-    border-radius: 20px;
-    z-index: 10;
-}
-
-.iphone-screen {
-    width: 100%;
-    height: 100%;
-    background: var(--color-white);
-    border-radius: 36px;
-    overflow: hidden;
-    position: relative;
-}
-
-.iphone-screenshot {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-}
-
-.iphone-home-indicator {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
 }
 
 .hand-image {
@@ -1032,12 +1078,22 @@ a:focus-visible, button:focus-visible {
     height: auto;
 }
 
-.btn-large {
-    padding: var(--space-md) var(--space-2xl);
-    font-size: var(--font-size-base);
+/* ===================
+   SECTION TITLE
+   =================== */
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--space-xl);
 }
 
-/* Footer */
+/* ===================
+   FOOTER
+   =================== */
+
 .footer {
     background-color: var(--color-dark);
     color: rgba(255, 255, 255, 0.7);
@@ -1075,7 +1131,6 @@ a:focus-visible, button:focus-visible {
     filter: brightness(0) invert(1);
 }
 
-/* Footer Link Columns */
 .footer-links {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1114,47 +1169,6 @@ a:focus-visible, button:focus-visible {
     color: var(--color-white);
 }
 
-/* Footer Social Section (replacing newsletter) */
-.footer-social-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-
-.footer-social-section .footer-social {
-    flex-direction: row;
-}
-
-/* Footer Social Icons */
-.footer-social {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-}
-
-.social-link {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-sm);
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.5);
-    transition: all 200ms ease;
-}
-
-.social-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--color-white);
-}
-
-.social-link svg {
-    width: 18px;
-    height: 18px;
-}
-
-/* Footer Bottom */
 .footer-bottom {
     display: flex;
     align-items: center;
@@ -1183,83 +1197,12 @@ a:focus-visible, button:focus-visible {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-disclaimer {
-    flex: 1;
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.3);
-    text-align: right;
-    line-height: 1.4;
-    max-width: 400px;
-}
+/* ===================
+   RESPONSIVE STYLES
+   =================== */
 
-.footer-disclaimer a {
-    color: rgba(255, 255, 255, 0.5);
-    text-decoration: underline;
-}
-
-.footer-disclaimer a:hover {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Buttons */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: 999px;
-    border: 1px solid transparent;
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background-color 150ms ease-out, color 150ms ease-out,
-        border-color 150ms ease-out, box-shadow 150ms ease-out;
-}
-
-.btn-primary {
-    background-color: var(--color-accent);
-    color: var(--color-white);
-    box-shadow: var(--shadow-soft);
-}
-
-.btn-primary:hover {
-    background-color: #439283;
-}
-
-.btn-light {
-    background-color: var(--color-white);
-    color: var(--color-primary);
-    border-color: var(--color-border-subtle);
-}
-
-.btn-light:hover {
-    background-color: var(--color-primary-soft);
-    color: var(--color-primary);
-}
-
-/* Section Title */
-.section-title {
-    font-family: var(--font-display);
-    font-size: var(--font-size-2xl);
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: var(--space-xl);
-}
-
-/* Responsive Styles */
 @media (max-width: 1024px) {
-    .features-card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .features-card-grid.three-col {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
+    .features-card-grid,
     .features-card-grid.three-col {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1269,7 +1212,6 @@ a:focus-visible, button:focus-visible {
     .header-pill {
         padding: var(--space-xs) var(--space-sm);
     }
-    
 
     .nav {
         display: none;
@@ -1289,7 +1231,7 @@ a:focus-visible, button:focus-visible {
     .nav.is-open {
         display: flex;
     }
-    
+
     .header-app-link {
         display: none;
     }
@@ -1297,7 +1239,7 @@ a:focus-visible, button:focus-visible {
     .mobile-menu-toggle {
         display: inline-flex;
     }
-    
+
     .footer-top {
         grid-template-columns: 1fr;
         gap: var(--space-xl);
@@ -1308,17 +1250,11 @@ a:focus-visible, button:focus-visible {
         align-items: flex-start;
         gap: var(--space-md);
     }
-    
+
     .footer-legal {
         order: 2;
     }
-    
-    .footer-disclaimer {
-        text-align: left;
-        max-width: 100%;
-        order: 3;
-    }
-    
+
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1339,41 +1275,30 @@ a:focus-visible, button:focus-visible {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    
+
     .features-card-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .phone-frame {
-        width: 180px;
-        height: 320px;
-    }
-
-    .cta-group {
-        flex-direction: column;
-        align-items: stretch;
     }
 
     .btn {
         width: 100%;
     }
-    
-    /* Final CTA Mobile */
+
     .final-cta-phone {
         width: 280px;
         height: 420px;
     }
-    
+
     .iphone-frame {
         width: 200px;
-        height: 400px;
+        height: 355px;
     }
-    
+
     .hand-image {
         right: -30px;
         width: 160px;
     }
-    
+
     .footer-links {
         grid-template-columns: 1fr;
     }

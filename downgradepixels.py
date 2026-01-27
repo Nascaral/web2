@@ -8,7 +8,7 @@ import os
 INPUT_DIR = "bridge/assets/images/phone_image"
 OUTPUT_DIR = "bridge/assets/images/output"
 
-BASE_WIDTH = 180          # 1x width (matches your CSS phone size)
+BASE_WIDTH = 164          # 1x width (matches your CSS phone size)
 ASPECT_RATIO = 19.5 / 9  # iPhone Pro Max screen ratio (height / width)
 
 SCALES = {
