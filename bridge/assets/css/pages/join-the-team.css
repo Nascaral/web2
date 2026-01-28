@@ -413,6 +413,10 @@
     display: block;
 }
 
+.founder-photo-adjusted {
+    object-position: center 20%;
+}
+
 .founder-info {
     padding: var(--space-lg);
 }
